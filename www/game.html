@@ -14,28 +14,29 @@
             src="https://maps.googleapis.com/maps/api/js?key=GOOGLEKEY&callback=initMap"></script>
 
     <script>
-            $(function () {
-                var application_key = "APP_KEY";
-                var client_key = "CLIENT_KEY";
-                var ncmb = new NCMB(application_key, client_key);
+        $(function () {
+            var appSettings = ConfigurationManager.AppSettings;
+            var application_key = appSettings["APIKEY"];
+            var client_key = appSettings["CLIKEY"];
+            var ncmb = new NCMB(application_key, client_key);
 
-                var user = ncmb.User.getCurrentUser();
+            var user = ncmb.User.getCurrentUser();
 
-                //ログインチェック
-                if (user === null) {
+            //ログインチェック
+            if (user === null) {
+                location.href = "./index.html";
+            } else {
+                $("#username").text(user.userName + "(Log out)");
+            }
+
+            //ログアウト
+            $("#username").on("click", function () {
+                ncmb.User.logout()
+                .then(function () {
                     location.href = "./index.html";
-                } else {
-                    $("#username").text(user.userName + "(Log out)");
-                }
-
-                //ログアウト
-                $("#username").on("click", function () {
-                    ncmb.User.logout()
-                    .then(function () {
-                      location.href = "./index.html";
-                    })
                 })
-            });
+            })
+        });
     </script>
     <title>Rectangles</title>
     <style>
