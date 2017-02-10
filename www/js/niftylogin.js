@@ -6,52 +6,53 @@
 
 
 
-$(function(){
-      var application_key = "APP_KEY";
-      var client_key = "CLIENT_KEY";
-      var ncmb = new NCMB(application_key, client_key);
+$(function () {
+    var appSettings = ConfigurationManager.AppSettings;
+    var application_key = appSettings["APIKEY"];
+    var client_key = appSettings["CLIKEY"];
+    var ncmb = new NCMB(application_key, client_key);
 
 
-           var user = ncmb.User.getCurrentUser();
-           if(user !== null){
-               location.href = "./game.html";
-           }
+    var user = ncmb.User.getCurrentUser();
+    if(user !== null){
+        location.href = "./game.html";
+    }
          
-           $("form").on("submit",function(){
-               var username = $("#username").val();
-               var password = $("#password").val();
-               var color = $("[name=color]:checked").val();
-               console.log(color);
-               //ログイン
-               ncmb.User.login(username,password)
-               .then(function(){
-                   //ログイン成功
+    $("form").on("submit",function(){
+        var username = $("#username").val();
+        var password = $("#password").val();
+        var color = $("[name=color]:checked").val();
+        console.log(color);
+        //ログイン
+        ncmb.User.login(username,password)
+        .then(function(){
+            //ログイン成功
                    
-                   //alert("ログイン成功");
-                    location.href = "./game.html";
+            //alert("ログイン成功");
+            location.href = "./game.html";
                     
  
-               })
-               .catch(function(){
-                   //ログイン失敗
-                   var user = new ncmb.User({
-                       userName: username,
-                       password: password,
-                       color:color
+        })
+        .catch(function(){
+            //ログイン失敗
+            var user = new ncmb.User({
+                userName: username,
+                password: password,
+                color:color
                        
-                   });
-                   //新規登録
-                   user.signUpByAccount()
-                   .then(function(){
-                         ncmb.User.login(username,password)
-                         .then(function(){
-                            //alert("新規登録＆ログイン成功");
-                            location.href = "./game.html";
-                         })
+            });
+            //新規登録
+            user.signUpByAccount()
+            .then(function(){
+                    ncmb.User.login(username,password)
+                    .then(function(){
+                    //alert("新規登録＆ログイン成功");
+                    location.href = "./game.html";
                     })
-               })
-               return false;
-           });
+            })
+        })
+        return false;
+    });
  });
 
 

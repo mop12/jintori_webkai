@@ -182,8 +182,9 @@ function initMap() {
 
             if (rectangle[cct].fillcolor != "red") {
                 $(function () {
-                    var application_key = "APP_KEY";
-                    var client_key = "CLIENT_KEY";
+                    var appSettings = ConfigurationManager.AppSettings;
+                    var application_key = appSettings["APIKEY"];
+                    var client_key = appSettings["CLIKEY"];
                     var ncmb = new NCMB(application_key, client_key);
 
                     // カレントユーザ情報の取得
