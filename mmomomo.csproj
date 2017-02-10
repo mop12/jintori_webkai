@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{C7B31B70-9B62-4807-B48D-10FA9BCCE32C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="config.xml" />
+    <Content Include="ncmb_js-2.1.4\.gitignore" />
+    <Content Include="ncmb_js-2.1.4\lib\acl.js" />
+    <Content Include="ncmb_js-2.1.4\lib\datastore.js" />
+    <Content Include="ncmb_js-2.1.4\lib\errors.js" />
+    <Content Include="ncmb_js-2.1.4\lib\file.js" />
+    <Content Include="ncmb_js-2.1.4\lib\geopoint.js" />
+    <Content Include="ncmb_js-2.1.4\lib\installation.js" />
+    <Content Include="ncmb_js-2.1.4\lib\ncmb.js" />
+    <Content Include="ncmb_js-2.1.4\lib\operation.js" />
+    <Content Include="ncmb_js-2.1.4\lib\provider-util.js" />
+    <Content Include="ncmb_js-2.1.4\lib\push.js" />
+    <Content Include="ncmb_js-2.1.4\lib\query.js" />
+    <Content Include="ncmb_js-2.1.4\lib\relation.js" />
+    <Content Include="ncmb_js-2.1.4\lib\request.js" />
+    <Content Include="ncmb_js-2.1.4\lib\request_script.js" />
+    <Content Include="ncmb_js-2.1.4\lib\role.js" />
+    <Content Include="ncmb_js-2.1.4\lib\script.js" />
+    <Content Include="ncmb_js-2.1.4\lib\signature.js" />
+    <Content Include="ncmb_js-2.1.4\lib\user.js" />
+    <Content Include="www\js\jquery-3.1.1.min.js" />
+    <Content Include="www\js\jquery.min.js" />
+    <Content Include="www\js\ncmb.min.js" />
+    <Content Include="ncmb_js-2.1.4\test\acl_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\core_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\datastore_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\files_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\frontend\config.js" />
+    <Content Include="ncmb_js-2.1.4\test\frontend\footer.js" />
+    <Content Include="ncmb_js-2.1.4\test\frontend\header.js" />
+    <Content Include="ncmb_js-2.1.4\test\frontend\index.html" />
+    <Content Include="ncmb_js-2.1.4\test\frontend\module_setup.js" />
+    <Content Include="ncmb_js-2.1.4\test\frontend\test_run.js" />
+    <Content Include="ncmb_js-2.1.4\test\geopoint_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\installations_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\operation_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\push_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\query_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\relation_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\roles_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\script_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\signature_test.js" />
+    <Content Include="ncmb_js-2.1.4\test\users_test.js" />
+    <Content Include="platforms\android\AndroidManifest.xml" />
+    <Content Include="platforms\android\res\drawable-hdpi\icon.png" />
+    <Content Include="platforms\android\res\drawable-ldpi\icon.png" />
+    <Content Include="platforms\android\res\drawable-mdpi\icon.png" />
+    <Content Include="platforms\android\res\drawable-xhdpi\icon.png" />
+    <Content Include="platforms\android\res\drawable-xxhdpi\icon.png" />
+    <Content Include="platforms\android\res\drawable-xxxhdpi\icon.png" />
+    <Content Include="platforms\chrome\background.js" />
+    <Content Include="platforms\chrome\icon.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon%402x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-40%402x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-40.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-50%402x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-50.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-60%402x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-60%403x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-60.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-72%402x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-72.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-76%402x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-76.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-small%402x.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon-small.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\icons\icon.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default%402x~iphone.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-568h%402x~iphone.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-667h.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-736h.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-Landscape%402x~ipad.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-Landscape-736h.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-Landscape~ipad.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-Portrait%402x~ipad.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default-Portrait~ipad.png" />
+    <Content Include="platforms\ios\MonacaApp\Resources\splash\Default~iphone.png" />
+    <Content Include="platforms\winrt\app_logo_winrt.png" />
+    <Content Include="platforms\winrt\app_small_logo_winrt.png" />
+    <Content Include="platforms\winrt\app_splash_screen_winrt.png" />
+    <Content Include="platforms\winrt\app_tile_wide_logo_winrt.png" />
+    <Content Include="platforms\winrt\package_logo_winrt.png" />
+    <Content Include="res\android\icon\hdpi.png" />
+    <Content Include="res\android\icon\ldpi.png" />
+    <Content Include="res\android\icon\mdpi.png" />
+    <Content Include="res\android\icon\xhdpi.png" />
+    <Content Include="res\android\icon\xxhdpi.png" />
+    <Content Include="res\android\icon\xxxhdpi.png" />
+    <Content Include="res\android\screen\splash-port-hdpi.9.png" />
+    <Content Include="res\android\screen\splash-port-ldpi.9.png" />
+    <Content Include="res\android\screen\splash-port-mdpi.9.png" />
+    <Content Include="res\android\screen\splash-port-xhdpi.9.png" />
+    <Content Include="res\android\screen\splash-port-xxhdpi.9.png" />
+    <Content Include="res\android\screen\splash-port-xxxhdpi.9.png" />
+    <Content Include="res\ios\icon\icon%402x.png" />
+    <Content Include="res\ios\icon\icon-40%402x.png" />
+    <Content Include="res\ios\icon\icon-40.png" />
+    <Content Include="res\ios\icon\icon-50%402x.png" />
+    <Content Include="res\ios\icon\icon-50.png" />
+    <Content Include="res\ios\icon\icon-60%402x.png" />
+    <Content Include="res\ios\icon\icon-60%403x.png" />
+    <Content Include="res\ios\icon\icon-60.png" />
+    <Content Include="res\ios\icon\icon-72%402x.png" />
+    <Content Include="res\ios\icon\icon-72.png" />
+    <Content Include="res\ios\icon\icon-76%402x.png" />
+    <Content Include="res\ios\icon\icon-76.png" />
+    <Content Include="res\ios\icon\icon-83.5%402x~ipad.png" />
+    <Content Include="res\ios\icon\icon-small%402x.png" />
+    <Content Include="res\ios\icon\icon-small%403x.png" />
+    <Content Include="res\ios\icon\icon-small.png" />
+    <Content Include="res\ios\icon\icon.png" />
+    <Content Include="res\ios\screen\Default%402x~iphone.png" />
+    <Content Include="res\ios\screen\Default-568h%402x~iphone.png" />
+    <Content Include="res\ios\screen\Default-667h.png" />
+    <Content Include="res\ios\screen\Default-736h.png" />
+    <Content Include="res\ios\screen\Default-Landscape%402x~ipad.png" />
+    <Content Include="res\ios\screen\Default-Landscape-736h.png" />
+    <Content Include="res\ios\screen\Default-Landscape~ipad.png" />
+    <Content Include="res\ios\screen\Default-Portrait%402x~ipad.png" />
+    <Content Include="res\ios\screen\Default-Portrait~ipad.png" />
+    <Content Include="res\ios\screen\Default~iphone.png" />
+    <Content Include="res\winrt\icon\app_logo_winrt.png" />
+    <Content Include="res\winrt\icon\app_small_logo_winrt.png" />
+    <Content Include="res\winrt\icon\app_tile_wide_logo_winrt.png" />
+    <Content Include="res\winrt\icon\package_logo_winrt.png" />
+    <Content Include="res\winrt\screen\app_splash_screen_winrt.png" />
+    <Content Include="web.config" />
+    <Content Include="www\components\loader.css" />
+    <Content Include="www\components\loader.js" />
+    <Content Include="www\components\monaca-cordova-loader\cordova-loader.js" />
+    <Content Include="www\components\monaca-core-utils\monaca-core-utils.js" />
+    <Content Include="www\components\monaca-jquery\jquery.js" />
+    <Content Include="www\components\ncmb\ncmb.min.js" />
+    <Content Include="www\css\style.css" />
+    <Content Include="www\game.html" />
+    <Content Include="www\index.html" />
+    <Content Include="www\js\niftylogin.js" />
+    <Content Include="www\js\ppp.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".monaca\project_info.json" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="platforms\chrome\manifest.json" />
+    <Content Include="platforms\ios\MonacaApp-Info.plist" />
+    <Content Include="ncmb_js-2.1.4\.codeclimate.yml" />
+    <Content Include="ncmb_js-2.1.4\.coveralls.yml" />
+    <Content Include="ncmb_js-2.1.4\.drone.yml" />
+    <Content Include="ncmb_js-2.1.4\.github\CONTRIBUTING.md" />
+    <Content Include="ncmb_js-2.1.4\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="ncmb_js-2.1.4\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="ncmb_js-2.1.4\.travis.yml" />
+    <Content Include="ncmb_js-2.1.4\bower.json" />
+    <Content Include="ncmb_js-2.1.4\config\default.json" />
+    <Content Include="ncmb_js-2.1.4\config\test.json" />
+    <Content Include="ncmb_js-2.1.4\LICENSE" />
+    <Content Include="ncmb_js-2.1.4\package.json" />
+    <Content Include="ncmb_js-2.1.4\README.md" />
+    <Content Include="ncmb_js-2.1.4\test\files\test.text" />
+    <Content Include="ncmb_js-2.1.4\test\frontend\.gitkeep" />
+    <Content Include="ncmb_js-2.1.4\test\mbaas.yml" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_component_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_exist_role_failure.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_fetchlist_get_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_apple_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_get_acl_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_get_date_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_get_geolocation_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_get_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_grape_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_post_acl_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_post_date_jst_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_post_date_utc_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_post_geolocation_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_post_pointer_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_post_pointer_user_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_food_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_nonexist_get_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_nonexist_post_failure.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_allinarray_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_byid_failure.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_byid_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_count_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_count_zero_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_desorder_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_empty.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_equalto_date_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_equalto_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_exists_false.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_exists_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_fetchall_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_fetch_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_greaterthanor_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_greaterthan_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_inarray_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_include_double_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_include_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_inquery_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_in_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_lessthanor_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_lessthan_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_limit_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_near_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_notequalto_date_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_notequalto_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_notinarray_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_notin_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_order_double_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_order_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_or_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_regex_back_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_regex_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_related_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_select_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_skip_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_where_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_withinkm_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_withinmile_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_withinrad_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_querytest_get_withinsquare_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_post_multi_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_post_role_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_post_user_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_put_multi_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_put_role_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_put_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_relation_put_user_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_batch_10requests_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_batch_50requests_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_batch_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_delete_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_fetch_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_get_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_TestClass_put_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_users_post_facebook_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_users_post_google_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_users_post_idpw2_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_users_post_idpw_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_classes_users_post_twitter_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_file_download_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_file_fetchAll_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_file_update_acl_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_file_upload_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_installation_get_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_installation_put_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_no_exist_role_put_failed.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_push_get_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_push_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_push_put_badge_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_push_put_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_addrole_double_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_addrole_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_adduser_double_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_adduser_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_get_fetchrole_double_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_get_fetchrole_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_get_fetchuser_double_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_get_fetchuser_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_post_sub2_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_post_sub_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_post_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_role_put_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_users_login_as_anonymous_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_users_login_as_anonymous_uuid_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_users_send_reset_password_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_users_send_signup_mail_failed.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_users_send_signup_mail_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_users_update_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_user_login_mailpw_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_user_login_namepw_current_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2013-09-01_user_login_namepw_success.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2015-09-01_script_delete_json.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2015-09-01_script_get_json.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2015-09-01_script_post_json.json" />
+    <Content Include="ncmb_js-2.1.4\test\stub\2015-09-01_script_put_json.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <Content Include="www\components\monaca-cordova-loader\.bower.json" />
+    <Content Include="www\components\monaca-cordova-loader\bower.json" />
+    <Content Include="www\components\monaca-core-utils\.bower.json" />
+    <Content Include="www\components\monaca-core-utils\bower.json" />
+    <Content Include="www\components\monaca-jquery\.bower.json" />
+    <Content Include="www\components\monaca-jquery\bower.json" />
+    <Content Include="www\components\ncmb\.bower.json" />
+    <Content Include="www\components\ncmb\bower.json" />
+    <Content Include="www\components\ncmb\LICENSE" />
+    <Content Include="www\components\ncmb\README.md" />
+    <Content Include="www\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+    <Folder Include="platforms\android\res\drawable\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>mmomomo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53767</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53767/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
